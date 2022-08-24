@@ -1,0 +1,36 @@
+import matplotlib.pyplot as plt
+import pandas as pd
+import numpy as np
+data = pd.read_csv('iris.txt',",",header=None)      #读取鸢尾花数据文件
+df=pd.DataFrame(data)                     #转化为dataframe数据类型
+df.columns = ['LenPetal','LenSepal']      #花瓣长度，花萼长度两个特征
+plt.rcParams['font.sans-serif']=['SimHei']#显示中文 
+#===========图表1=============
+plt.figure(figsize=(10, 10))
+plt.subplot(2,2,1)
+plt.xlabel("Len of Petal", fontsize=10) #横轴标签
+plt.ylabel("Len of Sepal", fontsize=10) #纵轴标签
+plt.title("花瓣/花萼长度散点图")        #图表标题
+plt.scatter(df['LenPetal'],df['LenSepal'],c='red')   #绘制两个特征组合的数据点
+#===========图表2=============
+plt.subplot(2,2,2)
+plt.title("花瓣长度直方图")
+plt.xlabel("Len of Petal", fontsize=10) #横轴标签
+plt.ylabel("count", fontsize=10)        #纵轴标签
+plt.hist(df['LenPetal'],histtype ='step')  #绘制花瓣长度分布直方图
+#===========图表3=============
+x=np.arange(30)
+plt.subplot(2,2,3)
+plt.xlabel("Index", fontsize=10)        #横轴标签
+plt.ylabel("Len of Sepal", fontsize=10) #横轴标签
+plt.title("花萼长度条形图")
+plt.bar(x,height=df['LenSepal'], width=0.5)   #绘制花萼数据条形图
+#===========图表4=============
+plt.subplot(2,2,4)
+sizes = [2,5,12,70,2,9]
+explode = (0,0,0.1,0.1,0,0)
+labels = ['A','B','C','D','E','F']
+plt.title("花瓣长度饼图")
+plt.pie(df['LenPetal'][8:14],explode=explode,autopct='%1.1f%%',labels=labels)   #为部分花瓣绘制饼图
+plt.legend(loc="upper left",fontsize=10,bbox_to_anchor=(1.1,1.05))
+plt.show()

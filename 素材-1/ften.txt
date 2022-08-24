@@ -1,0 +1,11 @@
+fruit_label	fruit_name	fruit_subtype	mass	width	height	color_score
+1	apple	granny_smith	192	8.4	7.3	0.55
+1	apple	granny_smith	180	8.0	6.8	0.59
+1	apple	granny_smith	176	7.4	7.2	0.60
+2	mandarin	mandarin	86 	6.2	4.7	0.80
+2	mandarin	mandarin	84 	6.0	4.6	0.79
+2	mandarin	mandarin	80 	5.8	4.3	0.77
+2	mandarin	mandarin	80 	5.9 	4.3	0.81
+2	mandarin	mandarin	76	5.8	4.0	0.81
+1	apple	braeburn	178	7.1	7.8	0.92
+1	apple	braeburn	172	7.4	7.0	0.89

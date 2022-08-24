@@ -1,0 +1,1 @@
+clusterAssment[i, :] = minIndex, distJI

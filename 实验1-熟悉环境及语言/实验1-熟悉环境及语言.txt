@@ -1,0 +1,8 @@
+课程：机器学习基础实验
+参考教材：机器学习实战（Machine Learning in Action），Peter Harrington 著；李锐 李鹏 等译
+编程语言：Python
+编程平台：Jupeter Notebook
+目标：熟悉环境及语言
+内容：依托一个小程序，熟悉Python语言的格式规范，数据及文件访问，数据可视化等内容。
+参考资料：	Python基础-数据与文件访问.pdf;
+		Python基础-常用机器学习库.pdf;
